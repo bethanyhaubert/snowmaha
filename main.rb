@@ -21,6 +21,20 @@ end
 # needs right here too:
 
 def currently_snowing?
-  true
-  # TODO - This is where the API integration that actually gets weather data will go.
+	api_key = "b2609cc19093c1afb68f0d7124993c7d"
+	omaha_coordinates = "41.2524,-95.9980"
+
+	api_url = "https://api.darksky.net/forecast/#{api_key}/#{omaha_coordinates}"
+
+	response = HTTParty.get(api_url)
+
+	response_hash = response.to_h
+
+	current_weather = response_hash["currently"]
+
+	if response_hash["summary"].include? "snow"
+		return true
+	else
+		return false
+	end
 end
