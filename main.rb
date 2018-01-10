@@ -32,7 +32,7 @@ def currently_snowing?
 
 	current_weather = response_hash["currently"]
 
-	if response_hash["summary"].include? "snow"
+	if current_weather["summary"].include? "snow"
 		return true
 	else
 		return false
