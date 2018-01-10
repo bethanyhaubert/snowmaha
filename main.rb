@@ -23,7 +23,7 @@ end
 def currently_snowing?
 	omaha_coordinates = "41.2524,-95.9980"
 
-	api_url = "https://api.darksky.net/forecast/#{ENV[DARK_SKY_API_KEY]}/#{omaha_coordinates}"
+	api_url = "https://api.darksky.net/forecast/#{ENV["DARK_SKY_API_KEY"]}/#{omaha_coordinates}"
 
 	response = HTTParty.get(api_url)
 
