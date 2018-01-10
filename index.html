@@ -1,1 +1,37 @@
-snow
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="manifest" href="site.webmanifest">
+        <link rel="apple-touch-icon" href="icon.png">
+        <!-- Place favicon.ico in the root directory -->
+
+        <link rel="stylesheet" href="css/let-it-snow.css">
+        <style>
+            body {
+                background: navy;
+                background-image: url(http://www.mathiaslawoffice.com/content/images/Omaha-Skyline.jpg);
+            }
+        </style>
+    </head>
+    <body>
+        <div class="let-it-snow"></div>
+        <p>Omaha</p>
+        <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+        <script src="js/let-it-snow.min.js"></script>
+        <script>$.letItSnow('.let-it-snow', {
+    stickyFlakes: 'lis-flake--js',
+    makeFlakes: true,
+    sticky: true
+});
+        </script>
+    </body>
+    <footer>
+        <p collectsnow></p>
+    </footer>
+</html>
