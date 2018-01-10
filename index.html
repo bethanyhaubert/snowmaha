@@ -21,17 +21,28 @@
         <title>Snowmaha</title>
         <link rel="shortcut icon" href="assets/favicon.ico" />
     </head>
+
     <body>
+        <script type="text/javascript">
+            fetch('https://api.darksky.net/forecast/944f7b751b9072b7b790781038e1e7ba/37.8267,-122.4233').then(function(response) {
+            console.log(response);
+            });
+  
+        </script>
+
+        <div id="weather"></div>
+
         <div class="let-it-snow"></div>
         <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
         <script src="js/let-it-snow.min.js"></script>
         <script>$.letItSnow('.let-it-snow', {
-    stickyFlakes: 'lis-flake--js',
-    makeFlakes: true,
-    sticky: true
-});
+                    stickyFlakes: 'lis-flake--js',
+                    makeFlakes: true,
+                    sticky: true
+                });
         </script>
     </body>
+    
     <footer>
         <p collectsnow></p>
     </footer>
